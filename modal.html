@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="./style/modal.css" type="text/css" rel="stylesheet" />
+    </head>
+    <body>
+        <div>
+            <button class="botaoAbrir">Abrir Modal</button>
+        </div>
+        <div class="modal">
+            <div class= 'modalContainer '>
+                <div class="buttonFechar">
+                    <span class="barra1"></span>
+                    <span class="barra2"></span>
+                </div>
+                <form>
+                    <h2>Modal com js</h2>
+                    <div>
+                        <input required type="text" />
+                        <label>Nome</label>
+                        <span class="erro" data-errNome></span>
+                    </div>
+                    <div>
+                        <input required type="text" />
+                        <label>Telefone</label>
+                        <span class="erro" data-errTelefone></span>
+                    </div>
+                    <div>
+                        <input required type="text" />
+                        <label>Email</label>
+                        <span class="erro" data-errEmail></span>
+                    </div>
+                    <div>
+                        <input required type="password" />
+                        <label>Senha</label>
+                        <span class="erro" data-errSenha></span>
+                    </div>
+                    <button>Enviar</button>
+                </form>
+            </div>
+        </div>
+        <script  src="/js/modal.js" ></script>
+    </body>
+</html>

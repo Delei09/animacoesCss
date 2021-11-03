@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+header{
+    width: 100%;
+    padding: 1rem;
+    background-color: red;
+    color: white;
+    height: 150px;
+}
+.menuResponsivo{
+    display: none;
+}
+.botao{
+    display: none;
+}
+.menu ul{
+    display: flex;
+    gap: 1rem;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+
+
+@media screen and (max-width: 700px){
+    .menu{
+        display: none;
+    }
+    .botao{
+        display: block;
+        position: relative;
+        z-index: 1000;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        padding: 20px;
+    }
+
+     .linha1 , .linha2 , .linha3{
+        content: '';
+        width: 30px;
+        height: 2px;
+        background-color: black;
+        position: relative;
+        top: 15px;
+        transition: 1.5s;
+    } 
+
+    .linha1Fechar {
+        content: '';
+        width: 30px;
+        height: 2px;
+        background-color: white;
+        position: relative;
+        top: 15px;
+        transform: rotate(45deg);
+        transition: 1.5s;
+        margin-left: 120px;
+
+    }
+    .linha3Fechar {
+        content: '';
+        width: 30px;
+        height: 2px;
+        background-color: white;
+        position: relative;
+        top: 7px;
+        transform: rotate(-45deg);
+        transition: 1.5s;
+        margin-left: 120px;
+
+
+    }
+    .sumir{
+        display: none;
+    }
+
+
+    header{
+        padding: 0;
+        width: 100%;
+    }
+    .menuResponsivo{
+        display: block;
+        transform: translateX(-300px);
+    }
+    .menuResponsivo ul{
+        padding: 1rem;
+        z-index: 10;
+        display: flex;
+        top: 0;
+        flex-direction: column;
+        gap: 1rem;
+        position: fixed;
+        width: 30vw;
+        height: 100vh;
+        background-color: rgba(0,0,0,0.9);
+    }
+}
+
+
+.ativar{
+    animation: ativar 2s forwards;
+}
+.desativar{
+    animation: desativar 2s forwards;
+
+}
+
+@keyframes ativar{
+    from {
+        opacity: 0;
+        transform: translateX(-300px) translateY(-47px);
+    } 
+    to{
+        opacity: initial;
+        transform: translateX(0) translateY(-47px);
+
+    }
+}
+
+@keyframes desativar{
+    from {
+        opacity: initial;
+        transform: translateX(0) translateY(-47px);
+    }
+    to{
+        opacity: 0;
+        transform: translateX(-300px) translateY(-47px);
+    }
+}

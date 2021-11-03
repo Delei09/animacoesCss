@@ -1,0 +1,147 @@
+body{
+    background-color: rgb(213, 223, 245);
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 150px;
+    margin: 50px 0;
+    
+    
+}
+.carregarCirculoBorda {
+    position: relative;
+}
+.carregarCirculoBorda span{
+    content: '';
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    border-radius: 50%;
+    border: brown 10px solid;
+    border-bottom-color: transparent ;
+    animation: carregandoCirculoBorda 1s infinite;
+}
+
+@keyframes carregandoCirculoBorda {
+    from{
+        transform: rotate(360deg);
+    }
+}
+
+.carregarCirculoBolinha {
+    position: relative;
+}
+.carregarCirculoBolinha span{
+    content: 'dsadsddsdsdsdsadas';
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    border-radius: 50%;
+    border: brown 10px dotted;
+    border-bottom-color: transparent ;
+    animation: carregandoCirculoBorda 1s infinite;
+
+}
+
+.carregarLinhaBolinha {
+    position: relative;
+}
+.bola1 , .bola2 , .bola3 {
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: brown;
+    position: absolute;
+}
+.bola1  {
+    top: 50px;
+    animation: linhaBolinha  infinite;
+    animation-duration: 0.7s;
+    animation-delay: 0s;
+}
+.bola2  {
+    top: 50px;
+    left: 50px;
+    animation: linhaBolinha  infinite;
+    animation-duration: 0.7s;
+    animation-delay: 0.12s;
+
+}
+.bola3  {
+    top: 50px;
+    left: 100px;
+    animation: linhaBolinha  infinite;
+    animation-duration: 0.7s;
+    animation-delay: 0.24s;
+}
+@keyframes linhaBolinha{
+    from{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-20px);
+    }
+    to{
+        transform: translateY(0);
+
+    }
+}
+
+
+
+.carregarLinhaBolinhaCrescendo {
+    position: relative;
+}
+.bola1C , .bola2C , .bola3C {
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: brown;
+    position: absolute;
+    
+}
+.bola1C  {
+    animation: linhaBolinhaCrescendo infinite;
+    animation-duration: 0.9s;
+    animation-delay: 0s;
+}
+.bola2C  {
+    left: 30px;
+    animation: linhaBolinhaCrescendo infinite;
+    animation-duration: 0.9s;
+    animation-delay: 0.150s;
+
+}
+.bola3C  {
+    left: 60px;
+    animation: linhaBolinhaCrescendo infinite;
+    animation-duration: 0.9s;
+    animation-delay: 0.30s;
+}
+@keyframes linhaBolinhaCrescendo{
+    from {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 1;
+      }
+      30% {
+        -webkit-transform: scale(0.1);
+        transform: scale(0.5);
+        opacity: 0.7;
+      }
+      30% {
+        -webkit-transform: scale(0.1);
+        transform: scale(0.8);
+        opacity: 0.7;
+      }
+      to {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 1; 
+      } 
+}

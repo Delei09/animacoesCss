@@ -1,0 +1,172 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: cadetblue;
+   
+}
+.modal{
+    position: relative;
+}
+.modalContainer{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position:fixed;
+    z-index: 100;
+    width: 100vw;
+    height: 100vh;
+}
+.botaoAbrir{
+    position: relative;
+    top: 100px;
+    left: 100px;
+    padding: 0.5rem 4rem;
+    border-radius: 5px;
+    border: none;
+    font-weight: bold;
+    transition: .5s;
+    background-color: rgba(178, 248, 199, 0.24);
+}
+.botaoAbrir:hover{
+    transform: scale(1.3);
+    /* transform: scale(1.2); */
+}
+form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    background-color: darkcyan;
+    padding: 4rem;
+    border-radius: .5rem;
+    width: 100%;
+    max-width: 42rem;
+}
+form div{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+}
+input{
+    width: 100%;
+    outline: none;
+    background-color: inherit;
+    border: none;
+    border-bottom: black 1px solid;
+    padding: 0.3rem;
+}
+
+input ~ label{
+    position: absolute;
+    top: -4px;
+    transition: 1s ease-in-out;
+    font-size: 12px ;
+}
+
+input:focus ~ label,
+input:valid ~ label {
+    outline: none;
+    font-size: 16px;
+    transform: translateX(-58px);
+}
+form button{
+    padding: 0.5rem 4rem;
+    border-radius: 5px;
+    border: none;
+    font-weight: bold;
+    transition: .5s;
+    background-color: rgba(143, 180, 154, 0.24);
+}
+form button:hover{
+    transform: scale(1.3);
+    /* transform: scale(1.2); */
+}
+.barra1{
+    content: '';
+    width: 0.2rem;
+    height: 2rem;
+    background-color: black;
+    position: absolute;
+    top: -180px;
+    left: 630px;
+    animation: barra1 1.5s forwards;
+}
+.barra2{
+    content: '';
+    width: 0.2rem;
+    height: 2rem;
+    background-color: black;
+    position: absolute;
+    top: -180px;
+    left: 630px;
+    animation: barra2 3.5s forwards;
+
+
+}
+@keyframes barra1 {
+    from{
+        opacity: 0;   
+    }
+    to{
+        opacity: 1;
+        transform: rotate(45deg);
+
+    }
+}
+@keyframes barra2 {
+    from{
+        opacity: 0;   
+        transform: rotate(360deg);
+    }
+    to{
+        opacity: 1;
+        transform: rotate(-45deg);
+
+    }
+}
+.buttonFechar{
+    position: relative;
+    cursor: pointer;
+    padding: .3rem;
+}
+
+.ativo{
+    display: flex; 
+    animation: modalAtivo 2s forwards;
+}
+.desativado{
+    display: block; 
+    animation: modalDesativado 3s forwards;
+}
+@keyframes modalAtivo {
+    from{
+        opacity: 0;
+        transform: translateY(-300px);
+    }
+    50%{
+        transform: translateY(50px);
+    }
+    to{
+        opacity: 1;
+        transform: initial;
+    }
+}
+@keyframes modalDesativado {
+    from{
+        opacity: 1;
+    }
+  
+    to{
+        opacity: 0;
+        transform: translateY(3000px);
+    }
+ 
+    
+}

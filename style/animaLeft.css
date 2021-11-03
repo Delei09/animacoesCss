@@ -1,0 +1,29 @@
+.left{
+    animation: left 3s forwards;
+}
+.inicio{
+    opacity: 0;
+}
+.sair{
+    animation: sair 3s forwards;
+}
+@keyframes sair {
+    from {
+        opacity: 1;
+        transform: initial;
+    }
+    to{
+        opacity: 0;
+        transform: translateX(-500px);
+    }
+}
+@keyframes left {
+    from {
+        opacity: 0;
+        transform: translateX(-500px);
+    }
+    to{
+        opacity: initial;
+        transform: initial;
+    }
+}

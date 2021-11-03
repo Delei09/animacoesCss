@@ -1,0 +1,46 @@
+.carousel{
+    display: flex;
+    width: 500px;
+    margin: 0 auto;
+}
+h1{
+    text-align: center;
+}
+.carousel div  img{
+    width: 500px;
+    height: 400px;
+    object-fit: cover;
+    object-position: center;
+}
+.option{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    margin: 20px auto;
+}
+.item1, .item2, .item3 {
+    content: '';
+    width: 20px;
+    height: 20px;
+    background-color: black;
+    position:relative;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.left{
+    transform: translateX(-500px);
+}
+.right{
+    transform: translateX(500px);
+}
+.esconde{
+    opacity: 0;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}

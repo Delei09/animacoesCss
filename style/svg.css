@@ -1,0 +1,38 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    position: relative;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    
+}
+header svg{
+    width:auto;
+    height: 200px ;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -10;
+}
+.mexer{
+    animation: mexer 1s ease-in-out infinite alternate;
+}
+@keyframes mexer {
+    from{
+        transform: scale(0.995);
+    }
+
+    50%{
+        transform: scale(1.005);
+    }
+    to{
+        transform: scale(1.0);
+    }
+}
